@@ -13,12 +13,14 @@
 # limitations under the License.
 #
 LOCAL_PATH := $(call my-dir)
+SDL_PATH:= ..\sdl2
 
 include $(CLEAR_VARS)
 
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/$(SDL_PATH)/include
 LOCAL_MODULE    := nativeegl
 LOCAL_CFLAGS    := -Wall
-LOCAL_SRC_FILES := jniapi.cpp renderer.cpp
+LOCAL_SRC_FILES := jniapi.cpp renderer.cpp Stage.cpp Game.cpp main.cpp Nave.cpp OpegGLImplement.cpp Sprite.cpp SpriteDeF.cpp
 LOCAL_LDLIBS    := -llog -landroid -lEGL -lGLESv1_CM 
 
 include $(BUILD_SHARED_LIBRARY)
