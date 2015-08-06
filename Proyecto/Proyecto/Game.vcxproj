@@ -82,7 +82,7 @@
     <ClInclude Include="..\..\app\Src\main\jni\Config.h" />
     <ClInclude Include="..\..\app\Src\main\jni\Game.h" />
     <ClInclude Include="..\..\app\Src\main\jni\Nave.h" />
-    <ClInclude Include=""..\..\app\Src\main\jni\OpegGLImplement.h" />
+    <ClInclude Include="..\..\app\Src\main\jni\OpegGLImplement.h" />
     <ClInclude Include="..\..\app\Src\main\jni\Sprite.h" />
     <ClInclude Include="..\..\app\Src\main\jni\SpriteDeF.h" />
     <ClInclude Include="..\..\app\Src\main\jni\Stage.h" />
