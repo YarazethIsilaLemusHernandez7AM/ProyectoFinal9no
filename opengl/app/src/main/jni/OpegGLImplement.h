@@ -4,17 +4,18 @@
 #ifdef _WIN32
 #include "SDL_opengl.h"
 #else
-#include "SDL_opengls2.h"
+#include "SDL_opengles2.h"
+#include <OpenGL.h>
 #endif
 #include "SDL.h"
 #include <stdio.h>
-#ifdef _WIN32
 #include <string>
 #include <fstream>
-#endif
+
 
 class OpenGlImplement
 {
+#ifdef _WIN32
 	PFNGLCREATEPROGRAMPROC glCreateProgram;
 	PFNGLATTACHSHADERPROC glAttachShader;
 	PFNGLLINKPROGRAMPROC glLinkProgram;
@@ -39,7 +40,7 @@ class OpenGlImplement
 	PFNGLVERTEXATTRIBPOINTERPROC glVertexAttribPointer;
 	PFNGLACTIVETEXTUREPROC glActiveTexture;
 	PFNGLUNIFORM1IPROC glUniform1i;
-
+#endif
 	SDL_Window *window;
 	#ifdef _WIN32
 	std::string readFile(const char *filePath);

@@ -2,10 +2,10 @@
 #include "Nave.h"
 #include "Stage.h"
 #include "Config.h"
-#ifdef __Windows__
+#ifdef _WIN32
 #include "SDL_opengl.h"
 #else
-#include "SDL_opengls2.h"
+#include "SDL_opengles2.h"
 #endif
 #include "OpegGLImplement.h"
 

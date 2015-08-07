@@ -17,6 +17,7 @@ SDL_PATH:= ..\sdl2
 
 include $(CLEAR_VARS)
 
+LOCAL_CFLAGS:= -std=c++11
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/$(SDL_PATH)/include
 LOCAL_MODULE    := nativeegl
 LOCAL_CFLAGS    := -Wall
