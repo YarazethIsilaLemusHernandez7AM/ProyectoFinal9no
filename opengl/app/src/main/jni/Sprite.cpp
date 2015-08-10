@@ -209,7 +209,12 @@ void Sprite::CreateTextures(char* name){
 
 		// Open OBJ file
 		std::ifstream inOBJ;
-		inOBJ.open(fp);
+		#ifdef _WIN32
+        inOBJ.open(fp);
+        #else
+        inOBJ.open(fp.c_str(), std::ios_base::in | std::ios_base::out);
+        #endif
+
 		if (!inOBJ.good())
 		{
 			exit(1);
@@ -255,7 +260,11 @@ void Sprite::CreateTextures(char* name){
 
 		// Open OBJ file
 		std::ifstream inOBJ;
+		#ifdef _WIN32
 		inOBJ.open(fp);
+		#else
+		inOBJ.open(fp.c_str(), std::ios_base::in | std::ios_base::out);
+		#endif
 		if (!inOBJ.good())
 		{
 			exit(1);
