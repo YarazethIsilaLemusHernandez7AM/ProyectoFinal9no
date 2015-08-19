@@ -3,4 +3,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" android:showAsAction="never" />
 </menu>
-<!-- From: file:/C:/Users/Yesenia/Desktop/Repo_ProyectoFinal9no/trunk/opengl/app/src/main/res/menu/menu_main.xml -->
+<!-- From: file:/C:/Repositorio9no/trunk/opengl/app/src/main/res/menu/menu_main.xml -->

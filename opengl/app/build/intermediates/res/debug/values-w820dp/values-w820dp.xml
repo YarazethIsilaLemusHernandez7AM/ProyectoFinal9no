@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Yesenia/Desktop/Repo_ProyectoFinal9no/trunk/opengl/app/src/main/res/values-w820dp/dimens.xml -->
+    <!-- From: file:/C:/Repositorio9no/trunk/opengl/app/src/main/res/values-w820dp/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">64dp</dimen>
 </resources>
