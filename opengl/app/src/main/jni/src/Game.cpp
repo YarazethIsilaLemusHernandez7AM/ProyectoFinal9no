@@ -14,26 +14,6 @@ CGame::CGame(){
 	mover_fondomenu_x = 0.f;
 }
 
-JNIEnv *g_env;
-
-extern "C" void Java_org_libsdl_app_SDLActivity_nativeInit(JNIEnv* env, jclass cls, jobject obj)
-{
-    // Store the environment for later use.
-    g_env = env;
-
-    /* This interface could expand with ABI negotiation, calbacks, etc. */
-    SDL_Android_Init(env, cls);
-
-    /* Run the application code! */
-    int status;
-    char *argv[2];
-    argv[0] = strdup("SDL_app");
-    argv[1] = NULL;
-    status = SDL_main(1, argv);
-
-    /* We exit here for consistency with other platforms. */
-    exit(status);
-}
 void CGame::IniciandoVideo()
 {
 	

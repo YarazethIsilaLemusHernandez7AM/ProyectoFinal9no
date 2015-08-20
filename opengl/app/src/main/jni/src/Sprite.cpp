@@ -1,6 +1,12 @@
 #include "Sprite.h"
 #include <stdio.h>
 #include <SDL.h>
+#ifndef _WIN32
+#include <android/asset_manager_jni.h>
+#include <jni.h>
+#ifdef __cplusplus
+extern "C"
+
 
 Sprite::Sprite(OpenGlImplement *openGlImplement){
 	rotate_x = 0.f; 
@@ -258,6 +264,14 @@ void Sprite::CreateTextures(char* name){
 		int in = 0;
 		int m = 0;
 
+		AAssetManager *assets = get_asset_manager();
+		SDL_Log("Aprobado");
+          // You should check the return value, here we assume logo.png is found
+         // SDL_RWops *rw = AAsset_RWFromAsset(assets,(const char *)fp.c_ );
+
+          // Do whatever you want with the rwops
+          //GfxSurface *i = SDL_LoadBMP_RW(rw, 1);
+
 		// Open OBJ file
 		std::ifstream inOBJ;
 		#ifdef _WIN32
@@ -345,4 +359,5 @@ void Sprite::CreateTextures(char* name){
 		// Close OBJ file
 		inOBJ.close();
 	}
+
 	#endif

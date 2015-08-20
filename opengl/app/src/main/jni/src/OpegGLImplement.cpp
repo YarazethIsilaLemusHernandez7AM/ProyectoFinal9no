@@ -40,6 +40,7 @@ void OpenGlImplement::InitGL()
 
 void OpenGlImplement::InitShaders()
 {
+
 	/////CHECK VERSION OF OPENGL/////
 	//char message [200];
 	//strcpy (message, (char *)glGetString(GL_VERSION));
@@ -57,12 +58,12 @@ void OpenGlImplement::InitShaders()
 
 	// Read shaders
 
-	std::string vertShaderStr = readFile("vertex.glsl");
+	std::string vertexShaderStr = readFile("vertex.glsl");
 	std::string fragShaderStr = readFile("fragment.glsl");
 
-	const GLchar *vertexShaderSource = vertShaderStr.c_str();
+	const GLchar *vertexShaderSource = vertexShaderStr.c_str();
 	const GLchar *fragmentShaderSource = fragShaderStr.c_str();
-		
+
 	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
 	glCompileShader(vertexShader);
 	GLint vShaderCompiled = GL_FALSE;
@@ -101,7 +102,9 @@ void OpenGlImplement::InitShaders()
 	glEnable(GL_DEPTH_TEST);   // Enable depth testing for z-culling
 	glDepthFunc(GL_ALWAYS);    // Set the type of depth-test
 	glShadeModel(GL_SMOOTH);   // Enable smooth shading
-	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);  // Nice perspective corrections
+	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);  // Nice perspective corrections}
+
+
 }
 
 void OpenGlImplement::InitBuffers(GLuint* vertexBufferObject, GLuint* indexBufferObject, GLuint* textureBufferObject, GLfloat* vexterPositions, GLuint vertexDataLen, GLuint* indexData, GLuint indexDataLen, GLfloat* textureData, GLuint textureDataLen){
@@ -207,6 +210,7 @@ OpenGlImplement::~OpenGlImplement(){
 	SDL_DestroyWindow(window);
 	window = NULL;
 }
+
 #ifdef _WIN32
 std::string OpenGlImplement::readFile(const char *filePath) {
 	std::string content;
